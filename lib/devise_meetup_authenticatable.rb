@@ -1,4 +1,3 @@
-
 require 'devise'
 require 'oauth'
 
