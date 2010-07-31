@@ -8,10 +8,11 @@ begin
     gem.summary = %Q{meetups oauth strategy captured for devise}
     gem.description = %Q{meetups oauth strategy captured for devise}
     gem.email = "mjording@opengotham.com"
-    gem.homepage = "http://github.com/opengotham/devise_meetup_authenticatable"
+    gem.homepage = "http://github.com/OpenGotham/devise_meetup_authenticatable"
     gem.authors = ["matthew jording"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_development_dependency "cucumber", ">= 0"
+    gem.files = FileList['lib/**/*.rb']
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
