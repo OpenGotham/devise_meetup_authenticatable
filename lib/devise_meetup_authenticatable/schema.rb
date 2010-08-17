@@ -6,7 +6,7 @@ module Devise #:nodoc:
 
     module Schema
 
-      # Database migration schema for meetup.
+      # Database migration schema for meetup Connect.
       #
       def meetup_authenticatable
         apply_devise_schema ::Devise.meetup_uid_field, Integer, :limit => 8 # BIGINT unsigned / 64-bit int

@@ -1,16 +1,12 @@
-begin
+
   require 'devise'
   require 'oauth'
   require 'devise_meetup_authenticatable/model'
   require 'devise_meetup_authenticatable/strategy'
   require 'devise_meetup_authenticatable/schema'
   require 'devise_meetup_authenticatable/routes'
-  #require 'devise_meetup_authenticatable/controller_filters'
   require 'devise_meetup_authenticatable/view_helpers'
-rescue LoadError => e
-  warn "Could not load dependency. Please ensure you have the oauth gem installed and listed in your Gemfile."
-  raise
-end
+
 
 module Devise
   
@@ -30,6 +26,7 @@ module Devise
   
   def self.meetup_client
     @@meetup_client ||= OAuth::Consumer.new("ABDAE5ED0962D3332A0B546174997828", "856263601BB15FA05D1062AA082FF6CD", :site => "http://www.meetup.com/", :request_token_url => "http://www.meetup.com/oauth/request/", :authorize_path => 'authorize/', :access_token_path => 'oauth/access/', :oauth_callback => "oob", :http_method => :post)
+    
   end
   
   
